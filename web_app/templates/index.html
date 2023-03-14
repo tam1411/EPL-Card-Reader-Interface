@@ -47,7 +47,11 @@
       <div class="content">
         {% include 'navbar.html' %}
         <!-- Content -->
-        {% block content %} {% endblock %}
+        {% block content %} 
+        <a href="{{url_for('login')}}">Login Page</a>
+        <br>
+        <a href="{{url_for('register')}}">Register Page</a>
+        {% endblock %}
       </div>
     </div>
     <script
@@ -57,5 +61,7 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{url_for('static', filename='script.js')}}"></script>
+
+    
   </body>
 </html>
